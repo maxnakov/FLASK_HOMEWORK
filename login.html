@@ -1,0 +1,24 @@
+
+{% extends "index.html" %}
+
+{% block title %} Login {% endblock  %}
+
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-md-3">
+            <form method="POST" action="/login">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                <small id="emailHelp" class="form-text text-muted">This website is safe</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            If you don't have an account click <a href="{{ url_for('register') }}">here to register</a>
+        </div>
+    </div>
+{% endblock %}
